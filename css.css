@@ -1,0 +1,67 @@
+@font-face {
+    font-family: snes;
+    src: url(fonts/snes.ttf); 
+   }
+body {
+    position: relative;
+    margin: 0;
+    background-color:rgb(5, 54, 70);
+}
+#score {
+    position: absolute;
+    top:0;
+    left:calc(50% - 100px);
+    margin:0;
+    font-family: snes;
+    font-size: 60px;
+    color: white;
+    text-shadow: 3px 4px 10px black;
+}
+#bottom {
+    position: absolute;
+    margin:0;
+    font-family: snes;
+    font-size: 60px;
+    color: white;
+    text-shadow: 3px 4px 10px black;
+}
+#bottom_author {
+    position: absolute;
+    left: 190px;
+    margin:0;
+    font-family: snes;
+    font-size: 40px;
+    color: white;
+    text-shadow: 3px 4px 10px black;
+}
+div {
+    position: absolute;
+    left:calc(50% - 315px);
+    top: 60px;
+}
+#Canvas {
+    margin:0;
+    background: linear-gradient( rgb(20, 50, 50), transparent 1px), linear-gradient( 90deg, rgb(20, 50, 50), transparent 1px);
+    background-size: 30px 30px;
+    background-position: center center;
+    background-color: rgb(20, 100, 120);
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgb(20, 100, 120);
+}
+@media (max-width: 900px) {
+    #Canvas{
+        width: 315px;
+        height: 315px;
+        background-size: 15px 15px;
+    }
+    div {
+        left:calc(50% - 157.5px);
+    }
+    #bottom {
+        font-size: 40px;
+    }
+    #bottom_author {
+        font-size: 20px;
+        left: 130px;
+    }
+}
