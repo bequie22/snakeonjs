@@ -5,76 +5,42 @@ var snake = [[300, 300], [300, 330], [300, 360]];
 var up = false, down = false, left = false, right = false;
 var old;
 
-document.addEventListener('touchstart', handleTouchStart, false);        
-document.addEventListener('touchmove', handleTouchMove, false);
-
-var xDown = null;                                                        
-var yDown = null;
-
-function getTouches(evt) {
-  return evt.touches ||             // browser API
-         evt.originalEvent.touches; // jQuery
-}                                                     
-                                                                         
-function handleTouchStart(evt) {
-    const firstTouch = getTouches(evt)[0];                                      
-    xDown = firstTouch.clientX;                                      
-    yDown = firstTouch.clientY;                                      
-};                                                
-                                                                         
-function handleTouchMove(evt) {
-    if ( ! xDown || ! yDown ) {
-        return;
+document.querySelector("#up").onclick = function(){
+    if(old != "down"){
+        up = true
+        down = false
+        left = false
+        right = false
+        old = "up"
     }
-
-    var xUp = evt.touches[0].clientX;                                    
-    var yUp = evt.touches[0].clientY;
-
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-                                                                         
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if ( xDiff > 0 ) {
-            if(old != "right"){
-                up = false
-                down = false
-                left = true
-                right = false
-                old = "left"
-            }
-        } else {
-            if(old != "left"){
-                up = false
-                down = false
-                left = false
-                right = true
-                old = "right"
-            }
-        }                       
-    } else {
-        if ( yDiff > 0 ) {
-            if(old != "down"){
-                up = true
-                down = false
-                left = false
-                right = false
-                old = "up"  
-            }          
-        } else { 
-            if(old != "up"){
-                up = false
-                down = true
-                left = false
-                right = false
-                old = "down"
-            }
-        }                                                                 
+} 
+document.querySelector("#down").onclick = function(){
+    if(old != "up"){
+        up = false
+        down = true
+        left = false
+        right = false
+        old = "down"
     }
-    xDown = null;
-    yDown = null;                                             
-};
-
-
+}
+document.querySelector("#left").onclick = function(){
+    if(old != "right"){
+        up = false
+        down = false
+        left = true
+        right = false
+        old = "left"
+    }
+}
+document.querySelector("#right").onclick = function(){
+    if(old != "left"){
+        up = false
+        down = false
+        left = false
+        right = true
+        old = "right"
+    }
+}
 //random pos of apple
 function random_pos(){
     var p;

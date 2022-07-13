@@ -7,6 +7,48 @@ body {
     margin: 0;
     background-color:rgb(5, 54, 70);
 }
+
+#up{
+    background: transparent;
+    border: none !important;
+    font-size: 30px;
+    position: absolute;
+    top:0;
+    left:210px;
+    width:210px;
+    height: 210px;
+}
+#down{
+    background: transparent;
+    border: none !important;
+    font-size: 30px;
+    position: absolute;
+    top:420px;
+    left:210px;
+    width:210px;
+    height: 210px;
+}
+#left{
+    background: transparent;
+    border: none !important;
+    font-size: 30px;
+    position: absolute;
+    top: 210px;
+    left:0;
+    width:210px;
+    height: 210px;
+}
+#right{
+    background: transparent;
+    border: none !important;
+    font-size: 30px;
+    position: absolute;
+    top:210px;
+    left:420px;
+    width:210px;
+    height: 210px;
+}
+
 #score {
     position: absolute;
     top:0;
@@ -63,5 +105,33 @@ div {
     #bottom_author {
         font-size: 20px;
         left: 130px;
+    }
+    #up{
+        font-size: 15px;
+        top:0;
+        left: calc(315px / 3);
+        width: calc(315px / 3);
+        height: calc(315px / 3);
+    }
+    #down{
+        font-size: 15px;
+        top:calc((315px / 3)*2);
+        left:calc(315px / 3);
+        width:calc(315px / 3);
+        height: calc(315px / 3);
+    }
+    #left{
+        font-size: 15px;
+        top: calc(315px / 3);
+        left:0;
+        width:calc(315px / 3);
+        height: calc(315px / 3);
+    }
+    #right{
+        font-size: 15px;
+        top:calc(315px / 3);
+        left:calc((315px / 3)*2);
+        width:calc(315px / 3);
+        height: calc(315px / 3);
     }
 }
